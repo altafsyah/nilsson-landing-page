@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap");
+@import "./animation.css";
+@import "./layout.css";
+
+:root {
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-body: "DM Sans", system-ui, sans-serif;
+  --color-bg: #f4f1ec;
+  --color-bg-dark: #111110;
+  --color-text: #111110;
+  --color-text-light: #f4f1ec;
+  --color-text-muted: #6b6860;
+  --color-accent: #c8a96e;
+  --color-border: rgba(17, 17, 16, 0.12);
+}
