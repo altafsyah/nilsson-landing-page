@@ -3,6 +3,30 @@
 @import "./layout.css";
 @import "./utility.css";
 
+@media (min-width: 769px) {
+  #scroll-container {
+    overflow: hidden;
+  }
+
+  #sections-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    will-change: transform;
+  }
+
+  #sections-wrapper > section {
+    flex-shrink: 0;
+    width: 100vw;
+    height: 100dvh;
+  }
+
+  #sections-wrapper > .about,
+  #sections-wrapper > .selected-works,
+  #sections-wrapper > .news-header {
+    width: auto;
+  }
+}
+
 :root {
   --font-display: "Cormorant Garamond", Georgia, serif;
   --font-body: "DM Sans", system-ui, sans-serif;
@@ -146,23 +170,18 @@
   background-color: white;
 }
 
-.works {
-  min-height: 100dvh;
+.work-panel {
   background-color: white;
   padding: 4rem;
 
   & .work__card {
-    min-height: calc(100dvh - 8rem);
+    height: 100%;
     width: 100%;
     border-radius: 4rem;
     overflow: hidden;
     position: relative;
     display: flex;
     flex-direction: column;
-
-    &:not(:first-child) {
-      margin-top: 4rem;
-    }
 
     & .work__card-content {
       & .work__card-title {
@@ -281,6 +300,15 @@
 }
 
 @media (max-width: 768px) {
+  #sections-wrapper {
+    display: block;
+  }
+
+  #sections-wrapper > section {
+    width: 100%;
+    height: auto;
+  }
+
   .hero {
     & .hero__content {
       & .hero__title {
@@ -352,19 +380,15 @@
     }
   }
 
-  .works {
+  .work-panel {
     padding: 1.5rem;
 
     & .work__card {
-      min-height: auto;
+      height: auto;
       border-radius: 1.5rem;
       overflow: hidden;
       display: grid;
       grid-template-rows: auto auto;
-
-      &:not(:first-child) {
-        margin-top: 2rem;
-      }
 
       & .work__card-image {
         position: relative;
