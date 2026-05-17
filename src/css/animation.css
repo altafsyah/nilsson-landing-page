@@ -30,6 +30,11 @@
   color: var(--color-text-inverse);
   opacity: 0;
   transform: translateY(100%);
+
+  @media (max-width: 1279px) {
+    font-size: 2rem;
+    letter-spacing: 0.2em;
+  }
 }
 
 body.is-loading {

@@ -15,7 +15,20 @@
         <div class="preloader__progress-bar" id="preloader-bar"></div>
       </div>
     </div>
-    <nav id="nav"></nav>
+    <nav id="nav" class="navbar">
+      <div class="navbar__inner">
+        <button class="navbar__hamburger" aria-label="Menu">
+          <span></span>
+          <span></span>
+        </button>
+        <span class="navbar__logo">NILSSON&reg;</span>
+        <ul class="navbar__links">
+          <li><a href="#about">PROJECTS</a></li>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#footer">CONTACT</a></li>
+        </ul>
+      </div>
+    </nav>
     <section class="hero" id="hero">
       <div class="hero__image img-cover">
         <img src="/images/hero.jpg" alt="Modern architectural building" />
@@ -42,7 +55,10 @@
         <section class="about" id="about">
           <div class="about__summary section-summary">
             <div class="about__summary-text">
-              <h3 class="badge">WHAT WE DO</h3>
+              <div class="badge-container">
+                <h3 class="badge">WHAT WE DO</h3>
+                <a href="#hero" class="navigation"> ABOUT US </a>
+              </div>
               <h2 class="">Shaping Future Architecture</h2>
               <p class="">
                 At Nilsson, we blend creativity and eco-consciousness to reshape
@@ -133,7 +149,10 @@
 
         <section class="selected-works" id="selected-works">
           <div class="selected-works__summary section-summary">
-            <h3 class="badge">SELECTED WORK</h3>
+            <div class="badge-container">
+              <h3 class="badge">SELECTED WORK</h3>
+              <a href="#hero" class="navigation"> ALL PROJECTS </a>
+            </div>
             <div class="selected-works__summary-content">
               <h2 class="">Shaping Future Architecture</h2>
               <p class="">
@@ -146,42 +165,44 @@
             </div>
           </div>
         </section>
-        <section class="work-panel" id="work-1">
-          <div class="work__card">
-            <div class="work__card-image img-cover reveal-image">
-              <img src="/images/the-escape.jpg" alt="The Escape project" />
-              <div class="overlay"></div>
-            </div>
-            <div class="work__card-content content-overlay">
-              <h2 class="work__card-title">The Escape</h2>
-              <div class="work__card-description inverted-border--tl">
-                <p class="">
-                  A serene retreat designed to blur the line between indoor
-                  comfort and the natural world, offering a sanctuary of calm
-                  amidst modern life.
-                </p>
+        <div class="work-panels-grid">
+          <section class="work-panel" id="work-1">
+            <div class="work__card">
+              <div class="work__card-image img-cover reveal-image">
+                <img src="/images/the-escape.jpg" alt="The Escape project" />
+                <div class="overlay"></div>
+              </div>
+              <div class="work__card-content content-overlay">
+                <h2 class="work__card-title">The Escape</h2>
+                <div class="work__card-description inverted-border--tl">
+                  <p class="">
+                    A serene retreat designed to blur the line between indoor
+                    comfort and the natural world, offering a sanctuary of calm
+                    amidst modern life.
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-        </section>
-        <section class="work-panel" id="work-2">
-          <div class="work__card">
-            <div class="work__card-image img-cover reveal-image">
-              <img src="/images/eco-loft.jpg" alt="Eco Loft project" />
-              <div class="overlay"></div>
-            </div>
-            <div class="work__card-content content-overlay">
-              <h2 class="work__card-title">ECO LOFT</h2>
-              <div class="work__card-description inverted-border--tl">
-                <p class="">
-                  From crafting compelling brand identities to delivering
-                  innovative digital solutions, our meticulous art direction
-                  ensures cohesive experiences.
-                </p>
+          </section>
+          <section class="work-panel" id="work-2">
+            <div class="work__card">
+              <div class="work__card-image img-cover reveal-image">
+                <img src="/images/eco-loft.jpg" alt="Eco Loft project" />
+                <div class="overlay"></div>
+              </div>
+              <div class="work__card-content content-overlay">
+                <h2 class="work__card-title">ECO LOFT</h2>
+                <div class="work__card-description inverted-border--tl">
+                  <p class="">
+                    From crafting compelling brand identities to delivering
+                    innovative digital solutions, our meticulous art direction
+                    ensures cohesive experiences.
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
 
         <section class="news-header" id="news-header">
           <div class="news-header__summary section-summary">
