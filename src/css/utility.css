@@ -1,0 +1,245 @@
+/* shared class for reusable css */
+.inverted-border--tl,
+.inverted-border--tr,
+.inverted-border--bl,
+.inverted-border--br {
+  --ib-r: 2.5rem;
+  --ib-offset: 0.75rem;
+  --ib-spread: 0.75rem;
+  --ib-color: white;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: var(--ib-r);
+    height: var(--ib-r);
+    background: transparent;
+  }
+}
+
+.inverted-border--tl {
+  border-radius: var(--ib-r) 0 0 0;
+
+  &::before {
+    top: calc(-1 * var(--ib-r));
+    right: 0;
+    border-radius: 0 0 var(--ib-r) 0;
+    box-shadow: var(--ib-offset) var(--ib-offset) 0 var(--ib-spread)
+      var(--ib-color);
+  }
+
+  &::after {
+    bottom: 0;
+    left: calc(-1 * var(--ib-r));
+    border-radius: 0 0 var(--ib-r) 0;
+    box-shadow: var(--ib-offset) var(--ib-offset) 0 var(--ib-spread)
+      var(--ib-color);
+  }
+}
+
+.inverted-border--tr {
+  border-radius: 0 var(--ib-r) 0 0;
+
+  &::before {
+    top: calc(-1 * var(--ib-r));
+    left: 0;
+    border-radius: 0 0 0 var(--ib-r);
+    box-shadow: calc(-1 * var(--ib-offset)) var(--ib-offset) 0 var(--ib-spread)
+      var(--ib-color);
+  }
+
+  &::after {
+    bottom: 0;
+    right: calc(-1 * var(--ib-r));
+    border-radius: 0 0 0 var(--ib-r);
+    box-shadow: calc(-1 * var(--ib-offset)) var(--ib-offset) 0 var(--ib-spread)
+      var(--ib-color);
+  }
+}
+
+.inverted-border--bl {
+  border-radius: 0 0 0 var(--ib-r);
+
+  &::before {
+    top: 0;
+    left: calc(-1 * var(--ib-r));
+    border-radius: 0 var(--ib-r) 0 0;
+    box-shadow: var(--ib-offset) calc(-1 * var(--ib-offset)) 0 var(--ib-spread)
+      var(--ib-color);
+  }
+
+  &::after {
+    bottom: calc(-1 * var(--ib-r));
+    right: 0;
+    border-radius: 0 var(--ib-r) 0 0;
+    box-shadow: var(--ib-offset) calc(-1 * var(--ib-offset)) 0 var(--ib-spread)
+      var(--ib-color);
+  }
+}
+
+.inverted-border--br {
+  border-radius: 0 0 var(--ib-r) 0;
+
+  &::before {
+    top: 0;
+    right: calc(-1 * var(--ib-r));
+    border-radius: var(--ib-r) 0 0 0;
+    box-shadow: calc(-1 * var(--ib-offset)) calc(-1 * var(--ib-offset)) 0
+      var(--ib-spread) var(--ib-color);
+  }
+
+  &::after {
+    bottom: calc(-1 * var(--ib-r));
+    left: 0;
+    border-radius: var(--ib-r) 0 0 0;
+    box-shadow: calc(-1 * var(--ib-offset)) calc(-1 * var(--ib-offset)) 0
+      var(--ib-spread) var(--ib-color);
+  }
+}
+
+.inverted-border--sm {
+  --ib-r: 1.25rem;
+  --ib-offset: 0.375rem;
+  --ib-spread: 0.375rem;
+}
+
+.inverted-border--md {
+  --ib-r: 2.5rem;
+  --ib-offset: 0.75rem;
+  --ib-spread: 0.75rem;
+}
+
+.inverted-border--lg {
+  --ib-r: 4rem;
+  --ib-offset: 1.25rem;
+  --ib-spread: 1.25rem;
+}
+
+.inverted-border--clipped {
+  &::before,
+  &::after {
+    clip-path: inset(0);
+  }
+}
+
+.section-summary {
+  padding: 4rem 6rem;
+  max-width: 49.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  & h2 {
+    margin-top: 2rem;
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 120%;
+  }
+
+  & p {
+    margin-top: 0.5rem;
+    line-height: 150%;
+    font-size: 1.25rem;
+  }
+
+  & .badge {
+    background-color: #f8f8f8;
+    width: fit-content;
+    font-size: 0.875rem;
+    font-weight: 500;
+    font-family: var(--font-display);
+    padding: 0.75rem 1rem;
+    border-radius: 0.4rem;
+  }
+}
+
+.img-cover {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.content-overlay {
+  flex: 1;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  color: var(--color-text-light);
+}
+
+.card-chip {
+  position: absolute;
+  background-color: white;
+  z-index: 1;
+
+  & h4,
+  & p {
+    position: relative;
+    z-index: 1;
+    line-height: 150%;
+  }
+
+  & h4 {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  & p {
+    margin-top: 0.4rem;
+  }
+}
+
+.label-uppercase {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1024px) {
+  .inverted-border--tl,
+  .inverted-border--tr,
+  .inverted-border--bl,
+  .inverted-border--br {
+    border-radius: 0;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+
+  .card-chip {
+    position: static;
+    width: 100%;
+  }
+
+  .section-summary {
+    padding: 3rem 1.5rem;
+
+    & h2 {
+      font-size: 1.75rem;
+      line-height: 2rem;
+    }
+
+    & p {
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+  }
+
+  .content-overlay {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
