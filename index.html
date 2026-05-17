@@ -7,10 +7,19 @@
     <link rel="stylesheet" href="/src/main.css" />
   </head>
   <body>
+    <div class="preloader" id="preloader">
+      <div class="preloader__content">
+        <span class="preloader__text">NILSSON</span>
+      </div>
+      <div class="preloader__progress">
+        <div class="preloader__progress-bar" id="preloader-bar"></div>
+      </div>
+    </div>
     <nav id="nav"></nav>
     <section class="hero" id="hero">
       <div class="hero__image img-cover">
         <img src="/images/hero.jpg" alt="Modern architectural building" />
+        <div class="overlay"></div>
       </div>
       <div class="hero__content content-overlay">
         <h1 class="hero__title">
@@ -19,9 +28,9 @@
         </h1>
         <div class="hero__description inverted-border--tl">
           <p>
-            Elevate your spaces sustainably with Nilsson. Discover
-            innovative modern designs for architecture, interior, and
-            exterior that harmonize with nature.
+            Elevate your spaces sustainably with Nilsson. Discover innovative
+            modern designs for architecture, interior, and exterior that
+            harmonize with nature.
           </p>
         </div>
       </div>
@@ -33,34 +42,50 @@
         <section class="about" id="about">
           <div class="about__summary section-summary">
             <div class="about__summary-text">
-              <h3>WHAT WE DO</h3>
-              <h2>Shaping Future Architecture</h2>
-              <p>
+              <h3 class="badge">WHAT WE DO</h3>
+              <h2 class="">Shaping Future Architecture</h2>
+              <p class="">
                 At Nilsson, we blend creativity and eco-consciousness to reshape
                 modern living. With a passion for sustainable design, we craft
                 functional and aesthetically pleasing environments that stand
                 the test of time while minimizing our ecological footprint.
               </p>
-              <a href="#hero"> ABOUT US </a>
+              <a href="#hero" class="navigation"> ABOUT US </a>
             </div>
             <div class="about__summary-icons">
-              <div class="icon"></div>
-              <div class="icon"></div>
-              <div class="icon"></div>
-              <div class="icon"></div>
-              <div class="icon"></div>
-              <div class="icon"></div>
+              <div class="icon">
+                <img src="/images/icon-3.svg" />
+              </div>
+              <div class="icon">
+                <img src="/images/icon-5.svg" />
+              </div>
+              <div class="icon">
+                <img src="/images/icon-1.svg" />
+              </div>
+              <div class="icon">
+                <img src="/images/icon-4.svg" />
+              </div>
+              <div class="icon">
+                <img src="/images/icon-6.svg" />
+              </div>
+              <div class="icon">
+                <img src="/images/icon-2.svg" />
+              </div>
             </div>
           </div>
         </section>
 
         <section class="services">
           <div class="service__card">
-            <div class="service__card-image">
-              <img src="/images/hero.jpg" alt="Modern architectural building" />
+            <div class="service__card-image reveal-image">
+              <img
+                src="/images/architecture.jpg"
+                alt="Modern architectural building"
+              />
+              <div class="overlay"></div>
             </div>
             <div
-              class="service__card-content card-chip inverted-border--bl inverted-border--clipped"
+              class="service__card-content card-chip inverted-border--bl"
             >
               <h4>Architecture</h4>
               <p>
@@ -71,8 +96,11 @@
             </div>
           </div>
           <div class="service__card">
-            <div class="service__card-image">
-              <img src="/images/hero.jpg" alt="Modern architectural building" />
+            <div class="service__card-image reveal-image">
+              <img
+                src="/images/interior.jpg"
+                alt="Modern architectural building"
+              />
             </div>
             <div class="service__card-content card-chip inverted-border--tl">
               <h4>Interior</h4>
@@ -84,11 +112,14 @@
             </div>
           </div>
           <div class="service__card">
-            <div class="service__card-image">
-              <img src="/images/hero.jpg" alt="Modern architectural building" />
+            <div class="service__card-image reveal-image">
+              <img
+                src="/images/exterior.jpg"
+                alt="Modern architectural building"
+              />
             </div>
             <div
-              class="service__card-content card-chip inverted-border--tr inverted-border--clipped"
+              class="service__card-content card-chip inverted-border--tr"
             >
               <h4>Exterior</h4>
               <p>
@@ -102,28 +133,29 @@
 
         <section class="selected-works" id="selected-works">
           <div class="selected-works__summary section-summary">
-            <h3>WHAT WE DO</h3>
+            <h3 class="badge">SELECTED WORK</h3>
             <div class="selected-works__summary-content">
-              <h2>Shaping Future Architecture</h2>
-              <p>
+              <h2 class="">Shaping Future Architecture</h2>
+              <p class="">
                 At Nilsson, we blend creativity and eco-consciousness to reshape
                 modern living. With a passion for sustainable design, we craft
                 functional and aesthetically pleasing environments that stand
                 the test of time while minimizing our ecological footprint.
               </p>
-              <a href="#hero"> ALL PROJECTS </a>
+              <a href="#hero" class="navigation"> ALL PROJECTS </a>
             </div>
           </div>
         </section>
         <section class="work-panel" id="work-1">
           <div class="work__card">
-            <div class="work__card-image img-cover">
-              <img src="/images/hero.jpg" alt="The Escape project" />
+            <div class="work__card-image img-cover reveal-image">
+              <img src="/images/the-escape.jpg" alt="The Escape project" />
+              <div class="overlay"></div>
             </div>
             <div class="work__card-content content-overlay">
               <h2 class="work__card-title">The Escape</h2>
               <div class="work__card-description inverted-border--tl">
-                <p>
+                <p class="">
                   A serene retreat designed to blur the line between indoor
                   comfort and the natural world, offering a sanctuary of calm
                   amidst modern life.
@@ -134,13 +166,14 @@
         </section>
         <section class="work-panel" id="work-2">
           <div class="work__card">
-            <div class="work__card-image img-cover">
-              <img src="/images/hero.jpg" alt="Eco Loft project" />
+            <div class="work__card-image img-cover reveal-image">
+              <img src="/images/eco-loft.jpg" alt="Eco Loft project" />
+              <div class="overlay"></div>
             </div>
             <div class="work__card-content content-overlay">
               <h2 class="work__card-title">ECO LOFT</h2>
               <div class="work__card-description inverted-border--tl">
-                <p>
+                <p class="">
                   From crafting compelling brand identities to delivering
                   innovative digital solutions, our meticulous art direction
                   ensures cohesive experiences.
@@ -153,63 +186,48 @@
         <section class="news-header" id="news-header">
           <div class="news-header__summary section-summary">
             <div class="news-header__summary-content">
-              <p>
+              <p class="">
                 Dive into our blog and unravel a world of architectural
                 inspiration, sustainable living tips, design trends, and expert
                 insights.
               </p>
-              <a href="#hero"> ALL PROJECTS </a>
+              <a href="#hero" class="navigation"> ALL ARTICLES </a>
             </div>
-            <h2>NEWS</h2>
+            <h2 class="">NEWS</h2>
           </div>
         </section>
         <section class="news" id="news">
           <div class="news__card">
-            <div class="news__card-image img-cover">
-              <img src="/images/hero.jpg" alt="Sustainable living" />
+            <div class="news__card-image img-cover reveal-image">
+              <img src="/images/news-1.jpg" alt="Sustainable living" />
             </div>
             <div class="news__card-content card-chip inverted-border--tr">
-              <h4>Sustainable Living Trends</h4>
-              <p>
-                Exploring the latest innovations in eco-friendly architecture
-                and how they shape our daily lives.
+              <h4>Smart Homes, Smarter Future: Integrating Technology in Eco-Friendly Designs</h4>
               </p>
             </div>
           </div>
           <div class="news__card">
-            <div class="news__card-image img-cover">
-              <img src="/images/hero.jpg" alt="Urban design" />
+            <div class="news__card-image img-cover reveal-image">
+              <img src="/images/news-2.jpg" alt="Urban design" />
             </div>
             <div class="news__card-content card-chip inverted-border--tr">
-              <h4>The Future of Urban Design</h4>
-              <p>
-                How modern cities are reimagining public spaces to foster
-                community and sustainability.
-              </p>
+              <h4>Minimalism in Interior Design: Embracing Simplicity for Modern Living</h4>
             </div>
           </div>
           <div class="news__card">
-            <div class="news__card-image img-cover">
-              <img src="/images/hero.jpg" alt="Material innovation" />
+            <div class="news__card-image img-cover reveal-image">
+              <img src="/images/news-3.jpg" alt="Material innovation" />
             </div>
             <div class="news__card-content card-chip inverted-border--tr">
-              <h4>Material Innovation</h4>
-              <p>
-                Discovering new building materials that combine durability with
-                environmental responsibility.
-              </p>
+              <h4>Sustainable Materials: Paving the Way for Greener Architecture</h4>
             </div>
           </div>
           <div class="news__card">
-            <div class="news__card-image img-cover">
-              <img src="/images/hero.jpg" alt="Biophilic design" />
+            <div class="news__card-image img-cover reveal-image">
+              <img src="/images/news-4.jpg" alt="Biophilic design" />
             </div>
             <div class="news__card-content card-chip inverted-border--tr">
-              <h4>Biophilic Design Principles</h4>
-              <p>
-                Integrating nature into built environments for healthier, more
-                inspiring spaces.
-              </p>
+             <h4>The Essence of Biophilic Design: Bridging Architecture and Nature</h4>
             </div>
           </div>
         </section>
@@ -223,24 +241,55 @@
       <section class="footer__menu">
         <div>
           <h3 class="label-uppercase">OFFICES</h3>
+          <div class="offices">
+            <h4>Prague</h4>
+            <p>
+              23 Greenfield Avenue, <br />Prague 120 00, <br />Czech Republic
+            </p>
+          </div>
+          <div class="offices">
+            <h4>LISBON</h4>
+            <p>45 Coastal Boulevard, <br />Lisbon 1350-125, <br />Portugal</p>
+          </div>
         </div>
         <div>
           <h3 class="label-uppercase">PAGES</h3>
+          <ul>
+            <li>HOME</li>
+            <li>SERVICES</li>
+            <li>ABOUT</li>
+            <li>CONTACT</li>
+          </ul>
+          <a href="#" class="cta">MORE TEMPLATES</a>
         </div>
         <div>
           <h3 class="label-uppercase">CMS</h3>
+          <ul>
+            <li>PROJECTS</li>
+            <li>PROJECT SINGLE</li>
+            <li>NEWS</li>
+            <li>NEWS SINGLE</li>
+          </ul>
         </div>
         <div>
           <h3 class="label-uppercase">UTILITY PAGES</h3>
+          <ul>
+            <li>404 ERROR PAGE</li>
+            <li>PASSWORD</li>
+            <li>STYLEGUIDE</li>
+            <li>LICENSING</li>
+            <li>CHANGELOG</li>
+          </ul>
         </div>
       </section>
       <section class="footer__socials">
         <div class="footer__socials-card inverted-border--tl">
-          <p>Follow us on social media for the latest updates and inspiration.</p>
+          <p>© MADE BY PAWEL GOLA. POWERED BY WEBFLOW.</p>
           <div class="footer__socials-links">
-            <a href="#" class="label-uppercase">Instagram</a>
-            <a href="#" class="label-uppercase">LinkedIn</a>
-            <a href="#" class="label-uppercase">Twitter</a>
+            <a href="#" class="label-uppercase"><img src="/images/icon-x.svg"></a>
+            <a href="#" class="label-uppercase"><img src="/images/icon-ig.svg"></a>
+            <a href="#" class="label-uppercase"><img src="/images/icon-behance.svg"></a>
+            <a href="#" class="label-uppercase"><img src="/images/icon-pinterest.svg"></a>
           </div>
         </div>
       </section>
