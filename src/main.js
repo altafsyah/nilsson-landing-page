@@ -57,10 +57,28 @@ function initHeroScale() {
   )
 }
 
+function initNavbarColorSwitch() {
+  const navbar = document.querySelector("#nav")
+
+  ScrollTrigger.create({
+    trigger: ".hero",
+    start: "bottom top",
+    onEnterBack: () => navbar.classList.remove("navbar--inverted"),
+    onLeave: () => navbar.classList.add("navbar--inverted"),
+  })
+
+  ScrollTrigger.create({
+    trigger: ".footer",
+    start: "top bottom-=100",
+    onEnter: () => navbar.classList.remove("navbar--inverted"),
+    onLeaveBack: () => navbar.classList.add("navbar--inverted"),
+  })
+}
+
 function initHorizontalScroll() {
   const mm = gsap.matchMedia()
 
-  mm.add("(min-width: 1025px)", () => {
+  mm.add("(min-width: 1280px)", () => {
     const wrapper = document.querySelector("#sections-wrapper")
     const totalScrollWidth = wrapper.scrollWidth - window.innerWidth
 
@@ -70,7 +88,7 @@ function initHorizontalScroll() {
       scrollTrigger: {
         trigger: "#scroll-container",
         pin: true,
-        scrub: 2,
+        scrub: 1.2,
         end: () => "+=" + totalScrollWidth * 1.5,
         invalidateOnRefresh: true,
       },
@@ -79,7 +97,7 @@ function initHorizontalScroll() {
     initDesktopImageReveals(scrollTween)
   })
 
-  mm.add("(max-width: 1024px)", () => {
+  mm.add("(max-width: 1279px)", () => {
     initMobileImageReveals()
   })
 }
@@ -97,6 +115,7 @@ function initPreloader() {
       document.body.classList.remove("is-loading")
       initHeroScale()
       initHorizontalScroll()
+      initNavbarColorSwitch()
     },
   })
 
